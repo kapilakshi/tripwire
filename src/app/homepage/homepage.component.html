@@ -1,3 +1,19 @@
-<p>
-  homepage works!
-</p>
+<p-dataView #dv [value]="link" [paginator]="true" [rows]="10">
+    <p-header>
+        <div class="ui-helper-clearfix">
+            <div class="ui-g">
+                <div class="ui-g-6 ui-md-4 filter-container">
+                    <div style="position:relative">
+                        <input type="search" pInputText placeholder="Search by title" (keyup)="dv.filter($event.target.value)">
+                    </div>
+                </div>
+           
+            </div>
+        </div>
+        
+    </p-header>
+  <ng-template let-data pTemplate="listItem">
+      <div class="ui-g-2 ui-sm-6"><a href="{{data.cty}}" target="_blank">{{data.nm}}</a>
+      </div>
+  </ng-template>
+  </p-dataView>
