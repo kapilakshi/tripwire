@@ -7,8 +7,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class GetDataService {
-
-  private _url: string = "/tripwire/assets/data/links.json";
+  
+  private _url: string = "/assets/data/links.json";
 
   constructor(private http: HttpClient) { }
 

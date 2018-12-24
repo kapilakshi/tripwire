@@ -1,4 +1,9 @@
 export interface ILink
 {
-name: string;
+    id:any;
+nm: string;
+cty:any;
+hse:any;
+yrs:any;
+
 }

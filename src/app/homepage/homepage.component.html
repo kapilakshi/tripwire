@@ -1,19 +1,28 @@
-<p-dataView #dv [value]="link" [paginator]="true" [rows]="10">
-    <p-header>
-        <div class="ui-helper-clearfix">
-            <div class="ui-g">
-                <div class="ui-g-6 ui-md-4 filter-container">
-                    <div style="position:relative">
-                        <input class="searchbox" type="search" pInputText placeholder="Search by title" (keyup)="dv.filter($event.target.value)">
+<html>
+<body>  
+    <div class="mydiv">
+ <p-dataView #dv [value]="link" [paginator]="true" paginatorPosition="both" [rows]="10" filterBy="nm,hse">
+        <p-header>
+                <div class="ui-helper-clearfix ">
+                    <div class="ui-g">
+                        <div class="ui-g-12 filter-container">
+                            <div style="position:relative"><img src="/assets/images/tripwirelogo.png" height="100px" width="190px"/>
+                                
+                                <input class="pi pi-search searchbox" type="search" pInputText placeholder="Search.." (keyup)="dv.filter($event.target.value)" size="50px"><span class="glyphicon glyphicon-search form-control-feedback"></span>
+                            </div>
+                        </div>
+                   
                     </div>
                 </div>
-           
-            </div>
-        </div>
-        
-    </p-header>
-  <ng-template let-data pTemplate="listItem">
-      <div class="ui-g-2 ui-sm-6"><a href="{{data.cty}}" target="_blank">{{data.nm}}</a>
-      </div>
-  </ng-template>
-  </p-dataView>
+                
+            </p-header>
+    <ng-template let-data pTemplate="listItem" >
+            <div class="datatable"  >
+                    <p  class="text"><a href="{{data.cty}}" target="_blank">{{data.nm}}</a></p>
+                    <p class="info">{{data.hse}}</p>
+                </div>
+   </ng-template>
+ 
+   </p-dataView>
+</div>
+</body></html>
