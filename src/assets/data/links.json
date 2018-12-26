@@ -2,14 +2,14 @@
   {
     "id": 1,
     "nm": "Edward the Elder",
-    "cty": "/assets/pdf/sdlc_tutorial.pdf",
+    "cty": "/tripwire/assets/pdf/sdlc_tutorial.pdf",
     "hse": "SDLC stands for Software Development Life Cycle. SDLC is a process that consists of a series of planned activities to develop or alter the Software Products. This tutorial will give you an overview of the SDLC basics, SDLC models available and their application in the industry.This tutorial also elaborates on other related methodologies like Agile, RAD and Prototyping.",
     "yrs": "899-925"
   },
   {
     "id": 2,
     "nm": "Athelstan",
-    "cty": "/assets/pdf/software_engineering_tutorial.pdf",
+    "cty": "/tripwire/assets/pdf/software_engineering_tutorial.pdf",
     "hse": "This tutorial provides you the basic understanding of software product, software design and development process, software project management and design complexities. At the end of the tutorial you should be equipped with well understanding of software engineering concepts.",
     "yrs": "925-940"
   },

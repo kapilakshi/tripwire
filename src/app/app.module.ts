@@ -8,8 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { SearchPipe } from './search.pipe';
 import {TableModule} from 'primeng/table';
-import {NgbModule,NgbPaginationModule,} from '@ng-bootstrap/ng-bootstrap';
-import {PaginatorModule} from "ng2-paginator";
+
 
 @NgModule({
   declarations: [
@@ -23,10 +22,7 @@ import {PaginatorModule} from "ng2-paginator";
     HttpClientModule,
     FormsModule,
     DataViewModule,
-    PaginatorModule,
-    TableModule,
-    NgbModule,
-    NgbPaginationModule
+    TableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
