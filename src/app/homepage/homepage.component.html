@@ -6,10 +6,10 @@
 
  <p-dataView #dv [value]="link" [paginator]="true" paginatorPosition="both" [rows]="10" filterBy="nm,hse">
         <p-header>
-                <div class="ui-helper-clearfix ">
+                <div class="ui-helper-clearfix">
                     <div class="ui-g">
                         <div class="ui-g-12 filter-container">
-                            <div style="position:relative"><div class="ui-g-6"><img src="/assets/images/tripwirelogo.png" height="150px" width="200px"/></div>
+                            <div style="position:relative"><div class="ui-g-6"><img src="/tripwire/assets/images/tripwirelogo.png" height="150px" width="200px"/></div>
                                 <div class="ui-g-6">
                                <div class="pi pi-search searchbox"> <input class="inputsearchbox" type="search" pInputText placeholder="Search.." (keydown.enter)="dv.filter($event.target.value)" (keydown.enter)="updateSearch($event)" ></div></div>
                             </div>
