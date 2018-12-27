@@ -9,7 +9,11 @@ import { GetDataService } from '../get-data.service';
 })
 export class HomepageComponent implements OnInit {
   public searchText : string;
+  searchTerm: string;
   constructor(private _getData : GetDataService) { }
+  updateSearch(e) {
+    this.searchTerm = e.target.value
+  }
   public link = [];
   ngOnInit() {
     this._getData.getJson().subscribe(data => this.link = data);

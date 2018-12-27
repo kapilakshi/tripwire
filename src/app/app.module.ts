@@ -8,13 +8,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { SearchPipe } from './search.pipe';
 import {TableModule} from 'primeng/table';
+import { HighlightPipe } from './highlight.pipe';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomepageComponent,
-    SearchPipe
+    SearchPipe,
+    HighlightPipe
   ],
   imports: [
     BrowserModule,

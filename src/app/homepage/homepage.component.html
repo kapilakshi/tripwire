@@ -1,14 +1,17 @@
+<!DOCTYPE html>
 <html>
 <body>  
-    <div class="mydiv">
+    <div class="ui-g">
+            <div class="ui-g-12 ui-md-12">
+
  <p-dataView #dv [value]="link" [paginator]="true" paginatorPosition="both" [rows]="10" filterBy="nm,hse">
         <p-header>
                 <div class="ui-helper-clearfix ">
                     <div class="ui-g">
                         <div class="ui-g-12 filter-container">
-                            <div style="position:relative"><img src="/assets/images/tripwirelogo.png" height="100px" width="190px"/>
-                                
-                                <input class="pi pi-search searchbox" type="search" pInputText placeholder="Search.." (keyup)="dv.filter($event.target.value)" size="50px"><span class="glyphicon glyphicon-search form-control-feedback"></span>
+                            <div style="position:relative"><div class="ui-g-6"><img src="/assets/images/tripwirelogo.png" height="150px" width="200px"/></div>
+                                <div class="ui-g-6">
+                               <div class="pi pi-search searchbox"> <input class="inputsearchbox" type="search" pInputText placeholder="Search.." (keydown.enter)="dv.filter($event.target.value)" (keydown.enter)="updateSearch($event)" ></div></div>
                             </div>
                         </div>
                    
@@ -19,10 +22,11 @@
     <ng-template let-data pTemplate="listItem" >
             <div class="datatable"  >
                     <p  class="text"><a href="{{data.cty}}" target="_blank">{{data.nm}}</a></p>
-                    <p class="info">{{data.hse}}</p>
+                    <p class="info" [innerHTML]="data.hse | highlight:searchTerm"></p>
                 </div>
    </ng-template>
  
    </p-dataView>
+</div>
 </div>
 </body></html>
